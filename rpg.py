@@ -9,6 +9,8 @@ def falar(texto):
     print("\033[1m" + texto + "\033[0m")
     time.sleep(4)
 
+cidade = "Koritzia"
+
 input("Pressione Enter para começar a jogar...")
 print('Bem-vindo(a) ao RPG "A carta de Hermes", caro jogador!')
 time.sleep(1.3)
@@ -20,7 +22,7 @@ bebida = input("> ")
 print(f'Obrigada, {nome}! Prepare-se para uma aventura emocionante!')
 time.sleep(1.3)
 
-inventario = ["A carta para Apolo", "20 Dracmas", f"{bebida}", "Mapa da cidade de Koritzia", "Chave do templo do lago sul", "Espada de bronze"]
+inventario = ["A carta para Apolo", "20 Dracmas", f"{bebida}", f"Mapa da cidade de {cidade}", "Chave do templo do lago sul", "Espada de bronze"]
 
 acao("=======================\nA CARTA DE HERMES\n=======================")
 print("Era uma manhã tranquila.")
@@ -50,7 +52,7 @@ if inicio == 1:
     for item in inventario:
         print("- " + item)
     acao(f"Ok, sem perder tempo! Você pega o seu mapa e verifica o destinatário.")
-    acao(f"Para chegar ao templo do lago sul, você precisa atravessar toda a cidade de Koritzia, e depois seguir pela trilha que leva até o templo.")
+    acao(f"Para chegar ao templo do lago sul, você precisa atravessar toda a cidade de {cidade}, e depois seguir pela trilha que leva até o templo.")
     acao(f"A travessia demora cerca de 3 horas. Você chegaria no destino ao por do sol, então você não pode se atrasar!")
     acao(f"Esse seria o caminho mais seguro, mas você também pode pegar um atalho pela floresta...")
     acao(f"Mas atenção! O caminho é sinuoso e as lendas dizem que a floresta é assombrada por espíritos malignos.")
@@ -61,7 +63,7 @@ if inicio == 1:
         acao(f"Por onde ir? \n [1] Seguir pelo caminho seguro, a cidade\n [2] Seguir pelo atalho na floresta")
         caminho = int(input("> "))
     if caminho == 1:
-            acao(f"Você decide seguir pelo caminho seguro, atravessando a cidade de Koritzia.")
+            acao(f"Você decide seguir pelo caminho seguro, atravessando a cidade de {cidade}.")
             acao(f"Durante a travessia, você encontra algumas pessoas amigáveis que te ajudam a encontrar o caminho certo.")
             acao(f"Após algumas horas de caminhada, você finalmente chega ao templo do lago sul, com a carta em mãos.")
             acao(f"Você entrega a carta para Apolo, que agradece e te recompensa com uma quantia generosa de dracmas.")
